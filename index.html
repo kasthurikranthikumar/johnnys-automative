@@ -262,6 +262,85 @@
             }
         }
 
+        /* Brands Ribbon */
+        .brands-ribbon {
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .brands-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .brands-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .brands-scroll {
+            display: flex;
+            gap: 3rem;
+            animation: scroll-brands 30s linear infinite;
+            width: fit-content;
+        }
+
+        .brands-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        .brand-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .brand-item:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .brand-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @keyframes scroll-brands {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Duplicate brands for seamless loop */
+        .brands-scroll-duplicate {
+            display: flex;
+            gap: 3rem;
+            animation: scroll-brands 30s linear infinite;
+            width: fit-content;
+        }
+
         /* Services Section */
         .services {
             padding: 6rem 2rem;
@@ -390,6 +469,23 @@
             border-bottom: none;
         }
 
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .hours-day {
+            font-weight: 600;
+            color: var(--accent-blue);
+            min-width: 80px;
+        }
+
+        .hours-time {
+            color: var(--text-light);
+        }
+
         .info-label {
             color: var(--text-muted);
             font-size: 0.9rem;
@@ -409,8 +505,8 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
+            padding: 0;
+            overflow: hidden;
             min-height: 400px;
             display: flex;
             align-items: center;
@@ -418,18 +514,11 @@
             flex-direction: column;
         }
 
-        .location-map-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .location-map p {
-            color: var(--text-muted);
-            font-size: 1rem;
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
         }
 
         /* Footer */
@@ -556,13 +645,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Johnny's Automotive</div>
+            <div class="logo">JOHNNYS AUTOMOTIVE</div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="cta-button">Book Now</button>
         </nav>
     </header>
 
@@ -572,10 +660,82 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Expert Auto Repair & <span>Maintenance</span></h1>
-                <p>Professional automotive services with a modern touch. Your car deserves the best.</p>
+                <p>Honest, friendly auto repair shop and mechanic known for fair pricing and quality workmanship.</p>
                 <div class="hero-buttons">
                     <button class="btn-primary">Get Started</button>
                     <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Ribbon -->
+        <section class="brands-ribbon">
+            <div class="brands-container">
+                <div class="brands-title">We Service All Major Brands</div>
+                <div style="overflow: hidden; width: 100%;">
+                    <div class="brands-scroll">
+                        <div class="brand-item">
+                            <div class="brand-logo">Ford</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Chevy</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Toyota</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Honda</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">BMW</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Mercedes</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Tesla</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Nissan</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Dodge</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">GMC</div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="brand-item">
+                            <div class="brand-logo">Ford</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Chevy</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Toyota</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Honda</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">BMW</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Mercedes</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Tesla</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Nissan</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">Dodge</div>
+                        </div>
+                        <div class="brand-item">
+                            <div class="brand-logo">GMC</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -587,7 +747,7 @@
             
             <div class="services-grid">
                 <div class="service-card scroll-animate">
-                    <div class="service-icon">🔧</div>
+                    <div class="service-icon">🛠️</div>
                     <h3>General Maintenance</h3>
                     <p>Regular oil changes, filter replacements, fluid checks, and preventive maintenance to keep your vehicle running smoothly.</p>
                 </div>
@@ -599,13 +759,13 @@
                 </div>
 
                 <div class="service-card scroll-animate">
-                    <div class="service-icon">⚙️</div>
+                    <div class="service-icon">🔧</div>
                     <h3>Engine Repair</h3>
                     <p>Expert engine diagnostics and repair services to address any mechanical issues and restore performance.</p>
                 </div>
 
                 <div class="service-card scroll-animate">
-                    <div class="service-icon">🔋</div>
+                    <div class="service-icon">⚡</div>
                     <h3>Battery & Electrical</h3>
                     <p>Battery testing, replacement, and electrical system diagnostics to ensure reliable starting and operation.</p>
                 </div>
@@ -617,7 +777,7 @@
                 </div>
 
                 <div class="service-card scroll-animate">
-                    <div class="service-icon">🚗</div>
+                    <div class="service-icon">🔍</div>
                     <h3>Diagnostics</h3>
                     <p>Advanced computer diagnostics to identify issues quickly and accurately, saving you time and money.</p>
                 </div>
@@ -637,22 +797,26 @@
 
                     <div class="info-item">
                         <div class="info-label">Phone</div>
-                        <div class="info-value"><a href="tel:(972) 438-4969" style="color: inherit; text-decoration: none;"(972) 438-4969</a></div>
+                        <div class="info-value"><a href="tel:+19724384969" style="color: inherit; text-decoration: none;">(972) 438-4969</a></div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-label">Hours</div>
                         <div class="info-value">
-                            <div style="margin-bottom: 0.5rem;">Mon - Fri: 8:30 AM - 6:00 PM</div>
-                            <div style="margin-bottom: 0.5rem;">Sat: 8:30 AM - 1:00 PM</div>
-                            <div>Sun: Closed</div>
+                            <div class="hours-grid">
+                                <div class="hours-day">Mon - Fri:</div>
+                                <div class="hours-time">8:30 AM - 6:00 PM CST</div>
+                                <div class="hours-day">Saturday:</div>
+                                <div class="hours-time">8:30 AM - 1:00 PM CST</div>
+                                <div class="hours-day">Sunday:</div>
+                                <div class="hours-time">Closed</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="location-map scroll-animate">
-                    <div class="location-map-icon">📍</div>
-                    <p>1101 N Britain Rd<br>Irving, TX 75061</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.8234567890123!2d-97.2!3d32.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c1f5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2s1101%20N%20Britain%20Rd%2C%20Irving%2C%20TX%2075061!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -661,7 +825,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Johnny's Automotive</div>
+            <div class="footer-logo">JOHNNYS AUTOMOTIVE</div>
             <p class="footer-text">Expert auto repair and maintenance services in Irving, Texas</p>
             <div class="footer-bottom">
                 <p>&copy; 2024 Johnny's Automotive. All rights reserved.</p>

@@ -341,6 +341,130 @@
             width: fit-content;
         }
 
+        /* Reviews Section */
+        .reviews {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .rating-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .rating-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .rating-badge:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .rating-platform {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .rating-score {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-lime));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-stars {
+            font-size: 1.2rem;
+            color: var(--accent-orange);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+        }
+
+        .review-stars {
+            font-size: 1.3rem;
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-lime));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+        }
+
+        .review-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .review-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
         /* Services Section */
         .services {
             padding: 6rem 2rem;
@@ -648,6 +772,7 @@
             <div class="logo">JOHNNYS AUTOMOTIVE</div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -780,6 +905,101 @@
                     <div class="service-icon">🔍</div>
                     <h3>Diagnostics</h3>
                     <p>Advanced computer diagnostics to identify issues quickly and accurately, saving you time and money.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews" id="reviews">
+            <div class="reviews-header">
+                <h2 class="section-title">What Our <span>Customers Say</span></h2>
+                <p class="section-subtitle">Trusted by thousands of satisfied customers across the Dallas-Fort Worth area</p>
+                
+                <div class="rating-badges">
+                    <div class="rating-badge">
+                        <div class="rating-platform">CarMax</div>
+                        <div class="rating-score">5.0</div>
+                        <div class="rating-stars">★★★★★</div>
+                    </div>
+                    <div class="rating-badge">
+                        <div class="rating-platform">Google Reviews</div>
+                        <div class="rating-score">4.8</div>
+                        <div class="rating-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Johnny's Automotive is the best! Fair pricing, honest work, and they actually explain what's wrong with your car. Highly recommend!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">M</div>
+                        <div class="review-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>CarMax Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Had my truck serviced here and was impressed with the professionalism and attention to detail. Will definitely be back!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">S</div>
+                        <div class="review-info">
+                            <h4>Sarah Thompson</h4>
+                            <p>Google Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Finally found a mechanic I can trust! They didn't try to upsell me on unnecessary repairs. Great service at fair prices."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">J</div>
+                        <div class="review-info">
+                            <h4>James Chen</h4>
+                            <p>Google Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Quick turnaround, excellent communication, and my car runs better than ever. These guys really know their stuff!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">A</div>
+                        <div class="review-info">
+                            <h4>Amanda Martinez</h4>
+                            <p>CarMax Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Best auto repair shop in Irving! The team is friendly, knowledgeable, and they stand behind their work 100%."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">D</div>
+                        <div class="review-info">
+                            <h4>David Wilson</h4>
+                            <p>Google Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card scroll-animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Took my Honda in for routine maintenance and they found a small issue before it became expensive. Saved me money!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">L</div>
+                        <div class="review-info">
+                            <h4>Lisa Anderson</h4>
+                            <p>Google Verified</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
